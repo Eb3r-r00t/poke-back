@@ -1,0 +1,67 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Antares API",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost/api/v1"
+        }
+    ],
+    "paths": {
+        "/login": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Login",
+                "operationId": "2dd578ff7aba2721293dac66833b27d1",
+                "responses": {
+                    "200": {
+                        "description": "Login"
+                    }
+                }
+            }
+        },
+        "/brands": {
+            "get": {
+                "tags": [
+                    "Brands"
+                ],
+                "summary": "Get all brands",
+                "operationId": "b476f0eff13eb12df7af8c43554e4286",
+                "responses": {
+                    "200": {
+                        "description": "List of brands"
+                    }
+                }
+            }
+        },
+        "/brands/paginated": {
+            "get": {
+                "tags": [
+                    "Brands"
+                ],
+                "summary": "Get paginated brands",
+                "operationId": "bd1576593012e55b92cc6a9c19672305",
+                "responses": {
+                    "200": {
+                        "description": "List of brands"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "headers": {
+            "Accept": {
+                "description": "application/json",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

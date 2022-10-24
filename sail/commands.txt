@@ -1,0 +1,8 @@
+sail(){
+    if [ "$1" = "test" ]; then
+        shift        # eat the 'update'
+        docker exec -it app php artisan test  "$@"
+    else
+        docker exec -it app "$@"
+    fi
+}
