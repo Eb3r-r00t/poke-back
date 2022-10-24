@@ -20,6 +20,11 @@ class Pokemon extends Model
         'defense'
     ];
 
+    protected $casts = [
+        'attack' => 'float',
+        'defense' => 'float'
+    ];
+
     protected $hidden = [
         'created_at',
         'updated_at'

@@ -12,7 +12,7 @@ class CreatePokemonRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string',
+            'name' => 'required|string|unique:pokemons,name',
             'type' => [new Enum(PokemonTypes::class), 'required', 'string'],
             'hp' => 'required|integer',
             'agility' => 'required|integer',
