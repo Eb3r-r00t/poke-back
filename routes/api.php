@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\PokemonController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,9 +25,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::post('logout', [AuthController::class, 'logout']);
 
-    Route::prefix('brands')->controller(BrandController::class)->group(function () {
+    Route::prefix('pokemons')->controller(PokemonController::class)->group(function () {
         Route::get('/', 'getAll');
-        Route::get('/paginated', 'getPaginated');
         Route::get('/{id}', 'getOne');
         Route::post('/', 'create');
         Route::put('/{id}', 'update');
