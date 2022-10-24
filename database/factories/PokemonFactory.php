@@ -19,10 +19,10 @@ class PokemonFactory extends Factory
         return [
             'name' => $this->faker->name,
             'type' => $this->faker->randomElement(['fire', 'water', 'grass']),
-            'hp' => $this->faker->randomNumber(),
-            'agility' => $this->faker->randomNumber(),
-            'attack' => $this->faker->randomFloat(),
-            'defense' => $this->faker->randomFloat(),
+            'hp' => $this->faker->randomNumber(3),
+            'agility' => $this->faker->randomNumber(3),
+            'attack' => $this->faker->randomFloat(2, 0, 999),
+            'defense' => $this->faker->randomFloat(2, 0, 999),
         ];
     }
 }
