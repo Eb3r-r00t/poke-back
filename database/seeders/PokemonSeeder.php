@@ -40,6 +40,5 @@ class PokemonSeeder extends Seeder
         foreach ($pokemons as $pokemon) {
             Pokemon::create($pokemon);
         }
-        Pokemon::factory()->count(50)->create();
     }
 }

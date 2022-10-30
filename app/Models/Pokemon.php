@@ -15,6 +15,7 @@ class Pokemon extends Model
         'name',
         'type',
         'hp',
+        'image',
         'agility',
         'attack',
         'defense'

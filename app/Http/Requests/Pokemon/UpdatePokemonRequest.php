@@ -14,10 +14,11 @@ class UpdatePokemonRequest extends FormRequest
         return [
             'name' => ['sometimes','string','unique:pokemons,name,'.$this->route('id')],
             'type' => [new Enum(PokemonTypes::class), 'sometimes', 'string'],
-            'hp' => 'sometimes|integer',
-            'agility' => 'sometimes|integer',
-            'attack' => 'sometimes|numeric',
-            'defense' => 'sometimes|numeric'
+            'image' => 'sometimes|url',
+            'hp' => 'sometimes|integer|min:0|max:100',
+            'agility' => 'sometimes|integer|min:0|max:100',
+            'attack' => 'sometimes|numeric|min:0|max:100',
+            'defense' => 'sometimes|numeric|min:0|max:100'
         ];
     }
 }

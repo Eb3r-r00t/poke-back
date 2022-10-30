@@ -12,12 +12,13 @@ class CreatePokemonRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|unique:pokemons,name',
+            'name' => 'required|string|unique:pokemons,name|max:25',
             'type' => [new Enum(PokemonTypes::class), 'required', 'string'],
-            'hp' => 'required|integer',
-            'agility' => 'required|integer',
-            'attack' => 'required|numeric',
-            'defense' => 'required|numeric'
+            'image' => 'required|url',
+            'hp' => 'required|integer|min:0|max:100',
+            'agility' => 'required|integer|min:0|max:100',
+            'attack' => 'required|numeric|min:0|max:100',
+            'defense' => 'required|numeric|min:0|max:100'
         ];
     }
 }

@@ -49,6 +49,7 @@ class PokemonTest extends TestCase
         $pokemon = [
             'name' => 'Bulbasaur',
             'type' => 'grass',
+            'image' => 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
             'hp' => 45,
             'agility' => 45,
             'attack' => 49.2,

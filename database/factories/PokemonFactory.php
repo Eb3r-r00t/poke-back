@@ -19,6 +19,7 @@ class PokemonFactory extends Factory
         return [
             'name' => $this->faker->name,
             'type' => $this->faker->randomElement(['fire', 'water', 'grass']),
+            'image' => $this->faker->url,
             'hp' => $this->faker->randomNumber(3),
             'agility' => $this->faker->randomNumber(3),
             'attack' => $this->faker->randomFloat(2, 0, 999),
